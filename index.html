@@ -1,8 +1,430 @@
-<html>
-<head>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#000" />
 
-</head>
-<body>
-      <p> Hey !</p>
- </body>
- </html>
+    <link rel="stylesheet" href="./assets/styles/main.css" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="http://fonts.cdnfonts.com/css/mustardo" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  </head>
+  <body class="relative bg-black m-0 p-0 overflow-x-hidden">
+    <!-- Navbar -->
+    <div>
+      <nav
+        class="sticky top-0 left-0 overflow-hidden px-2 py-0 bg-black z-50 border-b border-gray-800"
+        data-aos="fade-down"
+      >
+        <div class="w-full shadow-md">
+          <div
+            class="nav-container container px-4 lg:px-16 flex justify-between items-center py-4 md:py-2 relative"
+          >
+            <a
+              href="/"
+              class="text-2xl md:text-3xl font-bold font-mustardo tracking-widest text-white"
+            >
+              Jagadeesh
+            </a>
+            <!-- mobile nav handler  -->
+            <div class="block sm:hidden">
+              <input
+                class="absolute block h-8 w-8 top-5 right-5 z-20 opacity-0 cursor-pointer"
+                type="checkbox"
+                name=""
+                id=""
+                onchange="handleNav()"
+              />
+              <div
+                class="hamburger-lines h-6 w-8 pr-0.5 absolute top-5 right-5 z-10 flex flex-col justify-between"
+              >
+                <span
+                  class="line block h-1 w-full rounded-xl bg-white line1"
+                ></span>
+                <span
+                  class="line block h-1 w-full rounded-xl bg-white line2"
+                ></span>
+                <span
+                  class="line block h-1 w-full rounded-xl bg-white line3"
+                ></span>
+              </div>
+            </div>
+            <!--  -nav items -->
+            <div
+              class="text-white hidden sm:block text-xl font-semibold font-poppins"
+            >
+              <ul class="flex gap-16">
+                <li><a class="nav-link nav-link-ltr" href="#home">Home</a></li>
+                <li>
+                  <a class="nav-link nav-link-ltr" href="#about">About</a>
+                </li>
+                <li>
+                  <a class="nav-link nav-link-ltr" href="#contact">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div
+        id="fade-in"
+        class="mobile-nav fixed left-0 z-10 w-screen text-white"
+      >
+        <ul
+          class="flex flex-col gap-8 text-center font-bold font-poppins text-2xl"
+        >
+          <li onclick="handleNav()"><a href="#home">Home</a></li>
+          <li onclick="handleNav()"><a href="#about">About Me</a></li>
+          <!-- <li onclick="handleNav()"><a href="#projects">Projects</a></li> -->
+          <li onclick="handleNav()"><a href="#contact"> Contact Me</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="flex container text-white mt-2 mb-14 md:mb-24 relative pt-0 md:pt-4 lg:px-24"
+    >
+      <img
+        src="./assets/images/dots-square.svg"
+        alt=""
+        class="absolute w-40 opacity-20 -z-50 md:mt-6 -ml-3 lg:-ml-10"
+      />
+      <div class="flex flex-col gap-1 md:py-6 px-2 md:px-0 mt-6 md:mt-10">
+        <div>
+          <h2
+            class="text-theme-green text-2xl md:text-3xl font-semibold"
+            data-aos="fade-up"
+            data-aos-delay=""
+          >
+            Hey there!, I'm-
+          </h2>
+          <h1
+            class="text-5xl md:text-8xl lg:text-9xl font-bold py-2"
+            data-aos="fade-up"
+            data-aos-delay="150"
+          >
+            Jagadeesh <span class="inline-block md:hidden">Kothamasum</span
+            ><span class="hidden md:inline-block">K</span>.
+          </h1>
+        </div>
+
+        <p
+          class="text-2xl max-w-xl md:text-3xl font-semibold text- ml-2 my-2 md:my-4 md:max-w-screen-md text-slate-400"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          IOS Developer. A self-taught developer with an interest in
+          <span class="text-white"> Computer Science. </span>
+        </p>
+
+        <div
+          class="leading-snug text-md md:text-lg"
+          data-aos="fade-up"
+          data-aos-delay="250"
+        >
+          <p class="text-gray-400 py-1 ml-1">
+            🚀 Exploring opportunities and side projects.
+          </p>
+          <p class="text-gray-400 py-1 ml-1">
+            🎓 Currently Studying Computer Science at Jain University, Bangalore
+          </p>
+        </div>
+
+        <div class="flex mt-2 md:mt-3 text-lg ml-1 flex-wrap">
+          <div class="flex gap-2 mt-2 md:mt-0">
+            <a
+              href="https://github.com/KothamasumJagadeesh"
+              class="bg-gray-900 px-5 font-semibold tracking-wide rounded hover:bg-gray-800 transition sm:pr-3 w-32 md:w-auto text-center py-3"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <i class="fa-brands fa-github text-theme-green text-lg mr-1"></i>
+              Github
+            </a>
+            <a
+              href="https://www.linkedin.com/in/jagadeeshkothamasum/"
+              class="bg-gray-900 px-3 mr-2 font-semibold tracking-wide rounded hover:bg-gray-800 transition w-40 text-center py-3 md:w-fit"
+              data-aos="fade-up"
+              data-aos-delay="350"
+              ><i
+                class="fa-brands fa-linkedin text-theme-green text-lg mr-1"
+              ></i>
+              Linkedin</a
+            >
+          </div>
+          <div class="flex mt-2 md:mt-0">
+            <a
+              href="./resume.pdf"
+              target="_blank"
+              class="bg-gray-900 px-3 pr-4 mr-2 font-semibold tracking-wide rounded hover:bg-gray-800 transition w-40 text-center py-3 md:w-fit"
+              data-aos="fade-up"
+              data-aos-delay="400"
+              ><i
+                class="fa-solid fa-file-lines text-theme-green text-lg mr-1"
+              ></i>
+              Resume</a
+            >
+            <a
+              href="mailto:JagadeeshKothamasum@gmail.com"
+              class="bg-gray-900 px-3 mr-2 font-semibold tracking-wide rounded hover:bg-gray-800 transition w-32 text-center py-3 md:w-fit"
+              data-aos="fade-up"
+              data-aos-delay="450"
+              ><i
+                class="fa-solid fa-envelope text-theme-green text-lg mr-1"
+              ></i>
+              Email</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section
+      id="about"
+      class="container max-w-screen-xl px-8 md:px-12 pt-10 mb-10 md:mb-32"
+    >
+      <div class="flex justify-between flex-col md:flex-row" data-aos="fade-up">
+        <div class="w-full md:w-1/2 text-md text-gray-400">
+          <h2 class="text-2xl font-semibold font-inter text-white">
+            ⚡ About Me
+          </h2>
+          <p class="pt-2">
+            Hey! I'm Jagadeesh Kothamasum, a Creative - Capable - Confident Jain
+            University student pursuing a bachelor's degree in Internet of
+            Things
+            <!-- <span
+              class="tooltip expand inline-block cursor-help text-theme-green italic"
+              data-title="Hypertext Markup Language"
+            >
+              HTML
+            </span> -->
+          </p>
+
+          <p class="py-3">
+            I've always been a problem solver and a technophile who is enamored
+            with the latest gadgets.I started learning to programming when I was
+            a teenager, but it was always more of a pastime than a career path
+            for me. Then I realized that software engineering was my calling.
+          </p>
+          <p>
+            I’m familiar with a variety of programming languages, including
+            Java, Python, Swift , C, Embedded C , HTML, CSS, but I’m always
+            adding new skills to my repertoire.However, I believe my leadership
+            style is fairly adaptable because I prefer to facilitate rather than
+            lead from the front. This is possible because of my great leadership
+            abilities.
+          </p>
+          <p>
+            I’m also eager to meet other software engineers in the area, so feel
+            free to connect!
+          </p>
+        </div>
+        <div class="w-full md:w-1/2 mt-14 md:mt-2 flex justify-center">
+          <img
+            src="./assets/images/akhil.png"
+            alt=""
+            class="rounded-full w-screen sm:w-96"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <!-- Still working on this section -->
+    <!-- <section
+      class="container px-6 lg:px-12 max-w-screen-xl hidden"
+      id="projects"
+    >
+      <div class="projects-grid-container text-white">
+        <div
+          class="description flex justify-center items-left flex-col pl-2.5 gap-0 md:gap-2"
+        >
+          <h2 class="text-2xl md:text-4xl font-bold font-inter -tracking-wide">
+            All Creative Works
+          </h2>
+          <p class="py-2 text-slate-400 text-xl md:text-2xl max-w-md">
+            Here's some of my projects that i have worked on.
+          </p>
+          <a
+            href="#"
+            class="text-xl text-theme-green hover:underline transition"
+            >Explore More <i class="fa-solid fa-arrow-right-long"></i
+          ></a>
+        </div>
+        <div class="item-1">
+          <div
+            class="rounded-2xl overflow-hidden border-2 border-slate-800 max-w-xl"
+          >
+            <img src="./assets/images/projects.webp" alt="" />
+            <div class="px-4 pt-4 pb-6">
+              <div class="border-b border-slate-800 pb-3 mb-3">
+                <div class="flex justify-between text-2xl">
+                  <h2 class="font-semibold">Opiniometer</h2>
+                  <div class="flex gap-4">
+                    <a href=""><i class="fa-brands fa-github"></i></a>
+                    <a href=""
+                      ><i class="fa-solid fa-up-right-from-square"></i
+                    ></a>
+                  </div>
+                </div>
+                <div class="flex gap-3 pt-4">
+                  <p class="bg-gray-600 px-3 rounded">Kotlin</p>
+                  <p class="bg-gray-600 px-3 rounded">Swift</p>
+                  <p class="bg-gray-600 px-3 rounded">Java</p>
+                </div>
+              </div>
+
+              <p class="text-md text-gray-300 font-inter">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
+                iste veniam id tenetur obcaecati tempore ex rerum, dolorum
+                expedita ea, aut asperiores dicta. Rerum voluptas, quia eveniet
+                eius soluta commodi.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="item-2">
+          <div
+            class="rounded-2xl overflow-hidden border-2 border-slate-800 max-w-xl"
+          >
+            <img src="./assets/images/projects.webp" alt="" />
+            <div class="px-4 pt-4 pb-6">
+              <div class="border-b border-slate-800 pb-3 mb-3">
+                <div class="flex justify-between text-2xl">
+                  <h2 class="font-semibold">Opiniometer</h2>
+                  <div class="flex gap-4">
+                    <a href=""><i class="fa-brands fa-github"></i></a>
+                    <a href=""
+                      ><i class="fa-solid fa-up-right-from-square"></i
+                    ></a>
+                  </div>
+                </div>
+                <div class="flex gap-3 pt-4">
+                  <p class="bg-gray-600 px-3 rounded">Kotlin</p>
+                  <p class="bg-gray-600 px-3 rounded">Swift</p>
+                  <p class="bg-gray-600 px-3 rounded">Java</p>
+                </div>
+              </div>
+
+              <p class="text-md text-gray-300 font-inter">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
+                iste veniam id tenetur obcaecati tempore ex rerum, dolorum
+                expedita ea, aut asperiores dicta. Rerum voluptas, quia eveniet
+                eius soluta commodi.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="item-3">
+          <div
+            class="rounded-2xl overflow-hidden border-2 border-slate-800 max-w-xl"
+          >
+            <img src="./assets/images/projects.webp" alt="" />
+            <div class="px-4 pt-4 pb-6">
+              <div class="border-b border-slate-800 pb-3 mb-3">
+                <div class="flex justify-between text-2xl">
+                  <h2 class="font-semibold">Opiniometer</h2>
+                  <div class="flex gap-4">
+                    <a href=""><i class="fa-brands fa-github"></i></a>
+                    <a href=""
+                      ><i class="fa-solid fa-up-right-from-square"></i
+                    ></a>
+                  </div>
+                </div>
+                <div class="flex gap-3 pt-4">
+                  <p class="bg-gray-600 px-3 rounded">Kotlin</p>
+                  <p class="bg-gray-600 px-3 rounded">Swift</p>
+                  <p class="bg-gray-600 px-3 rounded">Java</p>
+                </div>
+              </div>
+
+              <p class="text-md text-gray-300 font-inter">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
+                iste veniam id tenetur obcaecati tempore ex rerum, dolorum
+                expedita ea, aut asperiores dicta. Rerum voluptas, quia eveniet
+                eius soluta commodi.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="text-white">
+      <div
+        class="h-screen flex flex-col items-center justify-center text-center max-w-md mx-auto gap-6"
+        data-aos="fade-up"
+      >
+        <h1 class="text-4xl md:text-6xl font-semibold font-inter">
+          Keep In Touch.
+        </h1>
+        <p class="text-gray-400 text-md md:text-xl px-10 md:px-0">
+          I'm currently specializing in
+          <span class="text-theme-green">IOS Development.</span> Feel free to
+          get in touch and talk more about your projects.
+        </p>
+
+        <div class="flex gap-3 pt-4 md:mt-0 flex-wrap justify-center">
+          <a
+            href="https://github.com/KothamasumJagadeesh"
+            class="bg-gray-900 px-5 font-semibold tracking-wide rounded hover:bg-gray-800 transition sm:pr-3 py-2"
+            data-aos="fade-up"
+            data-aos-delay="250"
+          >
+            <i class="fa-brands fa-github text-theme-green text-lg mr-1"></i>
+            Github
+          </a>
+          <a
+            href="https://www.linkedin.com/in/jagadeeshkothamasum/"
+            class="bg-gray-900 px-3 mr-2 font-semibold tracking-wide rounded hover:bg-gray-800 transition py-2"
+            data-aos="fade-up"
+            data-aos-delay="300"
+            ><i class="fa-brands fa-linkedin text-theme-green text-lg mr-1"></i>
+            Linkedin</a
+          >
+          <a
+            href="./resume.pdf"
+            target="_blank"
+            class="bg-gray-900 px-3 pr-4 mr-2 font-semibold tracking-wide rounded hover:bg-gray-800 transition py-2"
+            data-aos="fade-up"
+            data-aos-delay="400"
+            ><i
+              class="fa-solid fa-file-lines text-theme-green text-lg mr-1"
+            ></i>
+            Resume</a
+          >
+        </div>
+        <p class="absolute bottom-4 text-gray-400">
+          Designed and Developed by
+          <span class="text-theme-green">Jagadeesh Kothamasum.</span>
+        </p>
+      </div>
+    </section>
+
+    <script>
+      AOS.init({
+        once: true,
+      });
+
+      function handleNav() {
+        const nav = document.getElementById("fade-in");
+
+        nav.classList.toggle("show");
+      }
+    </script>
+  </body>
+</html>
